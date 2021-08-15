@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+</head>
+<body>
+	<div>
+		<label for = "input">enter the input</label>
+		<input type="text" name="input" id="input">
+		<br><br>
+		<button onclick="enter();">enter</button><br><br>
+		<label for="replace ">enter text to replace</label>
+		<input type="text" name="replace" id="replace">
+		<br><br>
+		<label for="replaced">enter text to be replaced with</label>
+		<input type="text" name="replaced" id="replaced"><br><br>
+		<button onclick="replace();">replace</button><br><br>
+		<div id="demo"></div>
+	</div>
+	<script>
+		function enter(){
+			var text =document.getElementById("input").value;
+			document.getElementById("demo").innerHTML = text;
+		}
+		function replace(){
+			var replace = document.getElementById("replace").value;
+			var replaced = document.getElementById("replaced").value;
+			document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML.replace(replace,replaced);
+		}
+		
+	</script>
+</body>
+</html>

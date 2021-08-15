@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment-2</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+		}
+		.container{
+			border: 10px solid skyblue;
+			border-radius: 30px;
+			width: 600px;
+			margin: auto;
+			margin-top: 10%;
+		}
+		#list{
+			list-style-type: none;
+			width: 50px;
+		}
+		#pic{
+			width: 400px;
+			height: 400px;
+			margin-left: 10px;
+		}
+		.item{
+			display: inline-block;
+		}
+		.thumb{
+			width: 50px;
+			height: 50px;
+			margin: 10px;
+			cursor: pointer;
+		}
+		.thumb:hover{
+			border: 2px solid skyblue;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<ul id="list" class="item"> 
+		<li><img src="a.jpeg" class="thumb" id="a"></li>
+		<li><img src="b.jpeg" class="thumb" id="b"></li>
+		<li><img src="c.jpeg" class="thumb" id="c"></li>
+		<li><img src="d.jpeg" class="thumb" id="d"></li>
+		<li><img src="e.jpeg" class="thumb" id="e"></li>
+	</ul>
+	<img src="a.jpeg" id="pic" class="item">
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	var flag = 0;
+$(document).ready(function(){
+	
+	$("#a").click(function(){
+		document.getElementById('pic').src="a.jpeg";
+		console.log("a");
+	});
+	$("#b").click(function(){
+		document.getElementById('pic').src="b.jpeg";
+		console.log("b");
+	});
+	$("#c").click(function(){
+			document.getElementById('pic').src="c.jpeg";
+			console.log("c");
+	});
+	$("#d").click(function(){
+			document.getElementById('pic').src="d.jpeg";
+			console.log("d");
+	});
+	$("#e").click(function(){
+			document.getElementById('pic').src="e.jpeg";
+			console.log("e");
+	});
+});
+
+</script>
+</html>
